@@ -1,29 +1,25 @@
-<!doctype html>
-<html lang="zh-tw">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>꙳｡❆ 交換禮物 ❆｡꙳</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<!-- 預設載入 default-bg class -->
-<body id="mainBody" class="default-bg"> 
-
-<div class="form-wrapper" id="inputArea">
-    <input type="text" id="phonenumberinput" inputmode="numeric" pattern="[0-9]{3}" maxlength="3" placeholder="請輸入抽到的號碼">
-    <button onclick="processGiftCode()">🔍</button>
-</div>
-
-<!-- 新增一個區域來顯示結果 -->
-<div id="resultArea" class="result-area" style="display:none;">
-    <!-- 文字內容放在這個 DIV 裡 -->
-    <div id="resultText" class="result-text-content"></div> 
-    <!-- 返回鍵放在這裡 -->
-    <button onclick="resetPage()" class="return-button">返回</button>
-</div>
-
-<script src="script.js"></script>
-</body>
+<!doctype html> 
+<html lang="zh-tw"> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>꙳｡❆ 交換禮物 ❆｡꙳</title> 
+<link rel="stylesheet" href="style.css"> 
+</head> 
+<!-- 預設載入 default-bg class --> 
+<body id="mainbody" class="default-bg"> 
+<div class="form-wrapper" id="inputarea"> 
+    <!-- 移除 maxlength="3" 和 minlength="3" -->
+    <input type="text" id="phonenumberinput" inputmode="numeric" pattern="[0-9]*" placeholder="請輸入抽到的號碼"> 
+    <button onclick="processgiftcode()">🔍</button> 
+</div> 
+<!-- 新增一個區域來顯示結果 --> 
+<div id="resultarea" class="result-area" style="display:none;"> 
+    <!-- 文字內容放在這個 div 裡 --> 
+    <div id="resulttext" class="result-text-content"></div> 
+    <!-- 返回鍵放在這裡 --> 
+    <button onclick="resetpage()" class="return-button">返回</button> 
+</div> 
+<script src="script.js"></script> 
+</body> 
 </html>
-
-
