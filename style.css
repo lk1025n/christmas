@@ -24,7 +24,6 @@ body {
     transition: none; 
 }
 
-/* ... (其他背景、form-wrapper 樣式保持不變) ... */
 .default-bg {
     background-image: url('winter_castle_background.jpg');
 }
@@ -50,7 +49,6 @@ input {
     box-sizing: border-box;
     color: #333;
     background-color: rgba(255, 255, 255, 0.9);
-    /* === 新增：應用辰宇落雁體到輸入框 === */
     font-family: 'ChenYuluoyan', Arial, sans-serif;
 }
 
@@ -62,7 +60,6 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* === 新增：應用辰宇落雁體到普通按鈕 === */
     font-family: 'ChenYuluoyan', Arial, sans-serif;
 }
 
@@ -76,9 +73,9 @@ button {
     color: #323c58; 
     display: flex;
     flex-direction: column; /* 垂直堆疊子元素 */
-    align-items: flex-start; /* 讓整個區域內容靠左對齊，但按鈕會被 margin: auto 置中 */
-    max-width: 80%; /* 限制最大寬度 */
-    width: 100%; /* 確保 flex 容器佔滿寬度 */
+    align-items: flex-start; 
+    max-width: 80%; 
+    width: 100%; 
 }
 
 /* 文字內容整體容器的樣式 */
@@ -88,11 +85,10 @@ button {
     text-align: left; 
 }
 
-/* *** 新增：只影響列表文字，讓三點內容往右移動 px *** */
+/* 只影響列表文字，讓三點內容往右移動 px */
 .gift-list {
     padding-left: 30px; 
 }
-
 
 /* 返回按鈕的樣式 */
 .return-button {
@@ -108,10 +104,26 @@ button {
     display: block; 
     margin-left: auto; /* 左邊界自動，確保水平置中 */
     margin-right: auto; /* 右邊界自動，確保水平置中 */
-    /* === 新增：應用辰宇落雁體到返回按鈕 === */
     font-family: 'ChenYuluoyan', Arial, sans-serif;
 }
 
 .return-button:hover {
     background-color: #e0e0e0;
+}
+
+/* 用於排版聖誕影片的容器 */
+.video-container {
+    display: flex;
+    flex-direction: column; /* 垂直排列影片 */
+    gap: 20px;              /* 影片之間留白 */
+    width: 100%;            /* 寬度佔滿父容器 */
+    max-width: 560px;       /* 限制最大寬度 */
+    margin: auto;           /* 置中 */
+}
+
+.video-container iframe {
+    width: 100%; 
+    aspect-ratio: 16 / 9; /* 設置固定的高寬比 16:9 */
+    height: auto; 
+    border-radius: 8px; /* 增加圓角 */
 }
