@@ -43,7 +43,7 @@ function processGiftCode() {
     // --- 特殊指令處理：輸入 "christmas" 導向 YouTube ---
     if (code === 'christmas') {
         // 使用 window.location.href 導航到 YouTube 播放清單
-        window.location.href = 'www.youtube.com';
+        window.location.href = 'https://youtu.be/24oVZSPa5Us?list=RD24oVZSPa5Us';
         return; // 結束函式，防止執行後面的數字檢查
     }
 
