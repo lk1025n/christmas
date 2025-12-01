@@ -1,0 +1,118 @@
+/* style.css */
+
+/* === 將您下載的字體引入 CSS === */
+@font-face {
+    font-family: 'ChenYuluoyan'; /* 給字體一個您喜歡的名稱 */
+    src: url('ChenYuluoyan-2.0-Thin.ttf') format('truetype'); /* 指定檔案路徑和格式 */
+    font-weight: normal;
+    font-style: normal;
+}
+/* =============================== */
+
+
+body {
+    /* 使用您定義的字體名稱 */
+    font-family: 'ChenYuluoyan', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: flex;
+    justify-content: center; /* 使 body 內容水平置中 */
+    align-items: center;    /* 使 body 內容垂直置中 */
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: none; 
+}
+
+/* ... (其他背景、form-wrapper 樣式保持不變) ... */
+.default-bg {
+    background-image: url('winter_castle_background.jpg');
+}
+
+.bg-022, .bg-780 {
+    background-image: url('1.jpg'); 
+}
+
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* === 新增：應用辰宇落雁體到輸入框 === */
+    font-family: 'ChenYuluoyan', Arial, sans-serif;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* === 新增：應用辰宇落雁體到普通按鈕 === */
+    font-family: 'ChenYuluoyan', Arial, sans-serif;
+}
+
+/* 結果顯示區域的樣式 (父容器) */
+.result-area {
+    background-color: transparent; 
+    padding: 0px; 
+    box-shadow: none;
+    white-space: pre-wrap;
+    line-height: 1.8;
+    color: #323c58; 
+    display: flex;
+    flex-direction: column; /* 垂直堆疊子元素 */
+    align-items: flex-start; /* 讓整個區域內容靠左對齊，但按鈕會被 margin: auto 置中 */
+    max-width: 80%; /* 限制最大寬度 */
+    width: 100%; /* 確保 flex 容器佔滿寬度 */
+}
+
+/* 文字內容整體容器的樣式 */
+.result-text-content {
+    font-size: 30px;
+    width: 100%; 
+    text-align: left; 
+}
+
+/* *** 新增：只影響列表文字，讓三點內容往右移動 px *** */
+.gift-list {
+    padding-left: 30px; 
+}
+
+
+/* 返回按鈕的樣式 */
+.return-button {
+    margin-top: 20px; 
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #ffffff; 
+    color: #333; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: none;
+    display: block; 
+    margin-left: auto; /* 左邊界自動，確保水平置中 */
+    margin-right: auto; /* 右邊界自動，確保水平置中 */
+    /* === 新增：應用辰宇落雁體到返回按鈕 === */
+    font-family: 'ChenYuluoyan', Arial, sans-serif;
+}
+
+.return-button:hover {
+    background-color: #e0e0e0;
+}
+
